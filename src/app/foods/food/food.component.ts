@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FoodComponent implements OnInit {
 
+  new: string;
+
   constructor() { }
 
   ngOnInit() {
+    this.new = "new";
   }
 
 }

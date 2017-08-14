@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{food.name}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h2>{{food.description}}</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-6">
+    <img [src]="food.imagePath" alt="{{food.name}}" class="img-responsive">
+  </div>
+  <div class="col-xs-6">
+    <div class="row">
+      <div class="col-xs-12">
+        <h4>Fat: {{food.fat}}</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <h4>Protein: {{food.protein}}</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <h4>Carbs: {{food.carb}}</h4>
+      </div>
+    </div>
+  </div>
+</div>
+

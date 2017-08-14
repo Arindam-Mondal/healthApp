@@ -43,9 +43,9 @@ export class EditFoodComponent implements OnInit {
 
   onSubmit() {
     this.dataStorageService.storeFoods(this.foodForm.value).subscribe(
-      response => console.log(response)
+      response => {console.log(response);
+      this.dataStorageService.fetchFoods();}
     );
-
-    this.dataStorageService.fetchFoods();
+    
   }
 }

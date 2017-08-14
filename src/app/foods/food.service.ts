@@ -13,12 +13,15 @@ export class FoodService {
         this.foodsChanged.next(this.foods.slice());
     }
 
-    getFood() {
-        return this.foods.slice();  
+    getFood(index: number) {
+        return this.foods[index];
     }
 
     setFoods(foods: Food[]) {
         this.foods = foods;
+        for(let f of foods) {
+            console.log(f);
+        }
         this.foodsChanged.next(this.foods.slice());
     }
 

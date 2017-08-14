@@ -13,6 +13,13 @@ import { FoodComponent } from './foods/food/food.component';
 import { EditFoodComponent } from './foods/edit-food/edit-food.component';
 import { FoodService } from "./foods/food.service";
 import { DataStorageService } from "./shared/data-storage.service";
+import { SingleFoodComponent } from "./foods/food-list/single-food/single-food.component";
+import { FoodDetailComponent } from './foods/food-detail/food-detail.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { AuthRoutingModule } from "./auth/auth-routing.module";
+import { AuthService } from "./auth/auth.service";
+
 
 @NgModule({
   declarations: [
@@ -22,17 +29,24 @@ import { DataStorageService } from "./shared/data-storage.service";
     FoodListComponent,
     HomeComponent,
     FoodComponent,
-    EditFoodComponent
+    EditFoodComponent,
+    SingleFoodComponent,
+    FoodDetailComponent,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpModule,
-    AppRoutingModule
+    AuthRoutingModule,
+    AppRoutingModule    
   ],
   providers: [
     FoodService, 
-    DataStorageService
+    DataStorageService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

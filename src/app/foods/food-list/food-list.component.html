@@ -1,3 +1,9 @@
-<p>
-  food-list works!
-</p>
+<div class="row">
+  <div class="col-xs-12">
+    <app-single-food
+    *ngFor="let foodEl of foods; let i=index"
+    [food]="foodEl"
+    [index]="i"
+    ></app-single-food>
+  </div>
+</div>

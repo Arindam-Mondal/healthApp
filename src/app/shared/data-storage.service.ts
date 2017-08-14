@@ -18,8 +18,11 @@ export class DataStorageService {
     fetchFoods() {
         this.http.get('https://health-app-aa405.firebaseio.com/food.json').map(
             (response: Response) => {
-                const foods: Food[] = response.json();
-                console.log(foods);
+                const foods: Food[] = [];
+                for(let key in response.json()) {
+                    foods.push(response.json()[key]);
+                }
+                console.log("food stored:" + foods);
                 return foods;
             }
         ).subscribe(
